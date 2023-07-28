@@ -6,6 +6,15 @@
 #include <stdlib.h>
 #include <dirent.h>
 
+/**
+ * filechk - Search for a file
+ *
+ * @str: The file name to be searched
+ *
+ * Return: If the file is found, a string containing the full path of the file
+ *         is returned. If the file is not found, NULL is returned.
+ */
+
 char *filechk(char *str)
 {
 	DIR *dir = opendir("/bin/");
