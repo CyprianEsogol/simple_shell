@@ -1,21 +1,21 @@
 #include "main.h"
-
 /**
- * _putchar - Write a character to the standard output (stdout).
- * @c: The character to be written.
+ * _putchar - writes the character c to stdout
+ * @c: character to print
  *
- * Return: On success, returns the number of characters written.
- *         On error, returns -1.
+ * Return: 1 on success, otherwise -1
  */
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+
 /**
- * _strlen - Calculate the length of a null-terminated string.
- * @s: Pointer to the input string.
+ * _strlen - Calculate the length of a string
  *
- * Return: The length of the string as a size_t value.
+ * @s: Pointer to the string to calculate the length of
+ *
+ * Return: Length of the string
  */
 size_t _strlen(const char *s)
 {
@@ -27,52 +27,29 @@ size_t _strlen(const char *s)
 	return (len);
 }
 /**
- * free_args - Free memory allocated for an array of strings.
- * @args: Double pointer to the array of strings to be freed.
+ * free_args - Free the memory allocated for an array of strings
+ * @args: Array of strings to free
  *
- * This function frees each individual string in the array
- * and then frees the array itself.
+ * Return: void
  */
 void free_args(char **args)
 {
-	if (args == NULL)
-		return;
+	char **temp = args;
 
-	for (int i = 0; args[i] != NULL; i++)
-		free(args[i]);
-
+	while (*temp)
+	{
+		free(*temp);
+		temp++;
+	}
 	free(args);
 }
 /**
- * _strcpy - Copy a null-terminated string from source to destination.
- * @destination: Pointer to the destination buffer.
- * @source: Pointer to the source string.
+ * _strncpy - copies a string
+ * @dest: destination buffer
+ * @src: source string
+ * @n: maximum number of characters to copy
  *
- * Return: A pointer to the destination string 'destination'.
- */
-char *_strcpy(char *destination, const char *source)
-{
-	char *start = destination;
-
-	while (*source != '\0')
-	{
-		*destination = *source;
-		destination++;
-		source++;
-	}
-
-	*destination = '\0';
-
-	return (start);
-}
-/**
- * _strncpy - Copy at most 'n' characters from the source string
- * to the destination.
- * @dest: Pointer to the destination buffer.
- * @src: Pointer to the source string.
- * @n: The maximum number of characters to copy.
- *
- * Return: A pointer to the destination string 'dest'.
+ * Return: pointer to destination buffer
  */
 char *_strncpy(char *dest, const char *src, size_t n)
 {
@@ -85,4 +62,23 @@ char *_strncpy(char *dest, const char *src, size_t n)
 		dest[i] = '\0';
 
 	return (dest);
+}
+/**
+ * _strcpy - copies a string
+ * @destination: string destination
+ * @source: source string
+ *
+ * Return: destination
+ */
+char *_strcpy(char *destination, const char *source)
+{
+	char *ptr = destination;
+
+	while (*source != '\0')
+	{
+		*ptr++ = *source++;
+	}
+	ptr = '\0';
+
+	return (destination);
 }

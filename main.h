@@ -34,21 +34,23 @@ char *_strcat(char *des, char *src);
 int _strcmp(char *fi, char *sd);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 char *filechk(char *str)
-int _putchar(char c)
-ssize_t _strlen(const char *s)
-void free_args(char **args)
-char *_strncpy(char *dest, const char *src, size_t n)
-char *_strcpy(char *destination, const char *source)
-int _strncmp(const char *s1, const char *s2, size_t n)
-int _atoi(const char *str)
-int _strcmp(const char *str1, const char *str2)
-char *_strdup(const char *str)
-char *_strchr(const char *str, int c)
-void free_tokens(char **tokens)
-char **parse_command(char *command)
-int _fputs(const char *str, FILE *stream)
-char *_getenv(const char *name)
-int _puts(char *str)
-int _fputc(int c, FILE *stream)
+int _putchar(char c);
+size_t _strlen(const char *s);
+void free_args(char **args);
+char *_strncpy(char *dest, const char *src, size_t n);
+char *_strcpy(char *destination, const char *source);
+int _strncmp(const char *s1, const char *s2, size_t n);
+int _atoi(const char *str);
+int _strcmp(const char *str1, const char *str2);
+char *_strdup(const char *str);
+char *_strchr(const char *str, int c);
+void free_tokens(char **tokens);
+char **parse_command(char *command);
+int _fputs(const char *str, FILE *stream);
+char *_getenv(const char *name);
+int _puts(char *str);
+int _fputc(int c, FILE *stream);
+char **split_line(char *line);
+int handle_semicolon(char *line);
 #endif
 
