@@ -40,7 +40,6 @@ char *_strncpy(char *dest, const char *src, size_t n);
 char *_strcpy(char *destination, const char *source);
 int _strncmp(const char *s1, const char *s2, size_t n);
 int _atoi(const char *str);
-int _strcmp(const char *str1, const char *str2);
 char *_strdup(const char *str);
 char *_strchr(const char *str, int c);
 void free_tokens(char **tokens);
@@ -51,5 +50,7 @@ int _puts(char *str);
 int _fputc(int c, FILE *stream);
 char **split_line(char *line);
 int handle_semicolon(char *line);
+int builtin_exit(void);
+int builtin_env(char **env);
 #endif
 
