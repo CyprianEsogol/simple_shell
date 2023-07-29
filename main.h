@@ -52,5 +52,9 @@ char **split_line(char *line);
 int handle_semicolon(char *line);
 int builtin_exit(void);
 int builtin_env(char **env);
+int execute(char **args);
+int execute_exit(char **args);
+int execute_env(void);
+int execute_command(char **args);
 #endif
 
