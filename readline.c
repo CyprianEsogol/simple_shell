@@ -58,7 +58,7 @@ int handle_semicolon(char *line)
 
 	for (i = 0; commands[i] != NULL; i++)
 	{
-	int status = execle((char **)commands[i]);
+	int status = execute((char **)commands[i]);
 
 	if (status != 0)
 	{

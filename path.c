@@ -14,7 +14,6 @@
 char *get_command_path(char *command)
 {
 	char *path, *dir, *full_path, *token;
-	char *slash_ptr;
 
 	if (_strchr(command, '/') != NULL)
 	{

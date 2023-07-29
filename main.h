@@ -56,5 +56,6 @@ int execute(char **args);
 int execute_exit(char **args);
 int execute_env(void);
 int execute_command(char **args);
+char *get_command_path(char *command);
 #endif
 
