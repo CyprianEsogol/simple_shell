@@ -33,7 +33,6 @@ int checkinbuilt(char *str);
 char *_strcat(char *des, char *src);
 int _strcmp(char *fi, char *sd);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
-char *filechk(char *str)
 int _putchar(char c);
 size_t _strlen(const char *s);
 void free_args(char **args);
